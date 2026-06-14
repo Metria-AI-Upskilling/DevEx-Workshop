@@ -10,32 +10,27 @@ This bootcamp is organized into modules, each building on previous concepts. Bel
 
 These modules cover foundational concepts that apply to all roles:
 
-1. **[Getting Started](1-getting-started.md)** *[~10 minutes]*
-   - Prerequisites and setup
+1. **[Getting Started](1-getting-started.md)**   - Prerequisites and setup
    - Installing Claude Code
    - Exercise: Run the Map app locally
 
-2. **[Working with AI Agents](2-working-with-ai-agents.md)** *[~20 minutes]*
-   - Understanding what agents are and their capabilities
+2. **[Working with AI Agents](2-working-with-ai-agents.md)**   - Understanding what agents are and their capabilities
    - The importance of planning and structured prompts
    - Context window management and optimization
    - Exercise: Add localStorage persistence to the Map app
 
-3. **[Model Context Protocol (MCP)](3-model-context-protocol.md)** *[~20 minutes]*
-   - What MCP is and why it matters
+3. **[Model Context Protocol (MCP)](3-model-context-protocol.md)**   - What MCP is and why it matters
    - How MCP works with tools and resources
    - Exercise: Use Context7 MCP to add marker clustering
 
-4. **[Safety and Guardrails](4-safety-and-guardrails.md)** *[~20 minutes]*
-   - Why guardrails matter in autonomous execution
+4. **[Safety and Guardrails](4-safety-and-guardrails.md)**   - Why guardrails matter in autonomous execution
    - Sandboxing and SafetyNet overview
    - Setting up custom safety rules
    - Exercise: Test SafetyNet protection
 
 ### Product / Design / Business
 
-5. **[Transforming & Structuring Data](5-transforming-structuring-data.md)** *[~30 minutes]*
-   - Using AI to transform unstructured data
+5. **[Transforming & Structuring Data](5-transforming-structuring-data.md)**   - Using AI to transform unstructured data
    - Converting qualitative feedback to structured formats
    - Exercise: Generate and structure user feedback
 
