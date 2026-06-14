@@ -198,4 +198,4 @@ When running autonomously, Claude can execute commands with the same access you 
 
 ---
 
-← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Advanced Planning with Speckit →](5-advanced-planning-speckit.md)
+← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Transforming & Structuring Data →](5-transforming-structuring-data.md)

@@ -32,15 +32,9 @@ These modules cover foundational concepts that apply to all roles:
    - Setting up custom safety rules
    - Exercise: Test SafetyNet protection
 
-5. **[Advanced Planning with Speckit](5-advanced-planning-speckit.md)** *[~30 minutes]*
-   - Spec-Driven Development concepts
-   - SpecKit workflow and commands
-   - When to use SpecKit vs simple planning
-   - Exercise: Add priority system to TODO app
-
 ### Product / Design / Business
 
-6. **[Transforming & Structuring Data](6-transforming-structuring-data.md)** *[~30 minutes]*
+5. **[Transforming & Structuring Data](5-transforming-structuring-data.md)** *[~30 minutes]*
    - Using AI to transform unstructured data
    - Converting qualitative feedback to structured formats
    - Exercise: Generate and structure user feedback

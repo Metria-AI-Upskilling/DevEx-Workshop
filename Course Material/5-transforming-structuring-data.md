@@ -1,4 +1,4 @@
-# Module 6: Transforming & Structuring Data
+# Module 5: Transforming & Structuring Data
 
 ## What You'll Learn
 - Understand why unstructured data is a bottleneck for decision-making
@@ -180,4 +180,4 @@ After completing this exercise, think about:
 
 ---
 
-← [Previous: Advanced Planning with Speckit](5-advanced-planning-speckit.md) | [Back to Course Overview](README.md)
+← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Back to Course Overview](README.md)
