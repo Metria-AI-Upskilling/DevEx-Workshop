@@ -29,7 +29,7 @@ Think of an agent as a junior developer who can read code, make changes across f
 > [!WARNING]
 > Agents make mistakes—always validate their output before committing.
 
-- No memory between sessions
+- Limited memory between sessions — [read more](https://milvus.io/blog/claude-code-memory-memsearch.md)
 - Limited context window
 - Work best with clear, specific instructions
 
