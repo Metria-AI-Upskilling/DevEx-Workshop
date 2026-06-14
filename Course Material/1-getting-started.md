@@ -11,7 +11,7 @@ In this section you will learn how to run the demo TODO app on localhost so you 
 
 ## Prerequisites
 #### 1. Github account
-Sign up via [github.com](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+Make sure you can log in to your GitHub account before the workshop.
 
 #### 2. Install the homebrew
 Install the package manager [homebrew](https://brew.sh) for easy installations (only for MacOS)  
@@ -45,27 +45,21 @@ With Git installed on your machine, you allow your computer to connect with your
 #### 5. An IDE ([Cursor](https://cursor.com), VSCode, or terminal-only)  
 Install the IDE of your choice or choose to work with Terminal/Command Prompt depending on your OS.  
 
-#### 6. Forking the course material repository
-[Fork this repository](https://github.com/kshruti22/ai-empowered-development-course/tree/main) through your Github account. Learn more about forking [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).  
-
-   **Why fork?** If you fork your own copy, you can push your exercise solutions and create pull requests; cloning directly gives you read-only access. For this bootcamp, we recommend forking so you can practice the full development workflow including commits, pushes, and PRs. If you just want to test without pushing anything you can go with Option A.
-
-#### 7. Clone the course material repository
-In this step, we will attempt to get a local copy of the repository you forked in your Github account, to make changes to it easily. 
+#### 6. Clone the course material repository
+We will share a repository with you — check with the workshop organiser for the URL. In this step, you will get a local copy of that repository so you can work through the exercises.
 
   ***Cursor***    
-  Open Cursor and select the `Clone via SSH` option. In the search bar, you should see your recent fork   if you have connected your Github account to Cursor.
+  Open Cursor and select the `Clone Git Repository` option. Paste in the repository URL shared with you.
   
   ***VSCode***  
-  Open VSCode and select the `Clone Git repository` option. Select `Clone via Github` and follow
-  the steps in the dialog.
+  Open VSCode, open the Command Palette (`Cmd+Shift+P` on Mac / `Ctrl+Shift+P` on Windows), type `Git: Clone`, and select it. Paste in the repository URL shared with you and follow the steps in the dialog.
   
   ***Terminal***  
   ```bash
   cd <path_where_you_want_to_clone_repo>
-  git clone <your_repository_url>
+  git clone <repository_url_shared_with_you>
   ```
-#### 8. Install claude  
+#### 7. Install claude  
   Open a new Terminal instance in Cursor. (Terminal Menu -> New Terminal)  
   
   ***MacOS***
@@ -77,39 +71,23 @@ In this step, we will attempt to get a local copy of the repository you forked i
   curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
   ```
 > [!WARNING]
-> Before the next step, make sure you have switched to your repository folder i.e., ai-empowered-development-course. Otherwise, you will end up giving Claude access to all of your computer which can be dangerous.
+> Before the next step, make sure you have switched to your repository folder i.e., DevEx-Workshop. Otherwise, you will end up giving Claude access to all of your computer which can be dangerous.
   ```bash
-  cd <path-to-ai-empowered-development-course>
+  cd <path-to-DevEx-Workshop>
   claude
   ```
-This step should ask you for login details or throw an error. If so, move on to the next step.  
 
-#### 9. Access to Claude 
-For Netlighters, follow **Step 2** in this [guide](https://docs.chat.netlight.com/guide/codepilot/tools/claude-code))  
-> [!NOTE]
-> To access the root or parent folder in your computer, i.e., `~` from `~/.claude.json` and `.claude/settings.json` do this:  
-> **MacOS**: Open Finder -> Go to /Users/YourUsername -> Cmd + Shift + G -> Cmd + Shift + .  
-> **Windows**: Open File Explorer -> Go to C:\Users\YourUsername\.claude\
+#### 8. Access to Claude 
+You already have access to Claude through your internal tools, no extra setup needed here.
 
 
-#### 10. FINAL STEP 
-In your IDE -> New Terminal:
-  ```bash
-  claude
-  ## If error looks like
-  ## "API Error: 400 {"error":{"message":"{\"message\":\"invalid beta flag\"}"
-  ## then run:
-  CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1 claude
-  ```
-This should run without any login prompts or errors. If you are still getting an error, troubleshoot using **Step 9** from [this guide](https://docs.chat.netlight.com/guide/codepilot/tools/claude-code).  
-
-#### 11. Further steps
-If you want to learn further about CLAUDE.md, memory management and advanced knowledge in agentic AI, read **Step 5 and onwards** from [this guide](https://docs.chat.netlight.com/guide/codepilot/tools/claude-code).
+#### 9. Further steps
+If you want to learn further about CLAUDE.md, memory management and advanced knowledge in agentic AI, see the [official Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/overview).
 
 ## Project Structure
 
 ```
-ai-empowered-development-course/
+DevEx-Workshop/
 ├── index.html      # Main HTML markup - contains the app layout
 ├── styles.css      # All CSS styling for the app
 ├── main.js         # Application logic (add, delete, filter todos)

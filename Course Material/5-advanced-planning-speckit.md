@@ -1,4 +1,4 @@
-# Module 6: Advanced Planning with Speckit
+# Module 5: Advanced Planning with Speckit
 
 ## What You'll Learn
 - Understand when simple planning isn't enough
@@ -228,4 +228,4 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
 
 ---
 
-← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Next: QA and Pull Requests →](6-qa-and-pull-requests.md)
+← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Next: Transforming & Structuring Data →](6-transforming-structuring-data.md)

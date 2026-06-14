@@ -1,4 +1,4 @@
-# Module 9: Transforming & Structuring Data
+# Module 6: Transforming & Structuring Data
 
 ## What You'll Learn
 - Understand why unstructured data is a bottleneck for decision-making
@@ -180,4 +180,4 @@ After completing this exercise, think about:
 
 ---
 
-← [Previous: Language Server Protocol](7-language-server-protocol.md) | [Back to Course Overview](README.md)
+← [Previous: Advanced Planning with Speckit](5-advanced-planning-speckit.md) | [Back to Course Overview](README.md)

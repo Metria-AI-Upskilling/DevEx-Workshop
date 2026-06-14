@@ -151,7 +151,7 @@ Before you start with the exercise:
 
 What happens? The todo is no longer visible. To find out why, we will ask Claude before implementing the solution directly.
 
-1. Open Claude Code in the project folder `ai-powered-development-course`
+1. Open Claude Code in the project folder `DevEx-Workshop`
    ```bash
    claude
    ```

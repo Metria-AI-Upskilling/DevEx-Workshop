@@ -1,13 +1,13 @@
-# AI Empowered Product Development Course
+# Metria DevEx
 
 This is a small course to help you become proficent in using Claude Code and other AI tools to increase the velocity of the product development of product teams.
 
-All bootcamp content, exercises, and learning materials are located in the [Course Material](./Course%20Material/README.md) folder. Start there to begin the AI-Assisted Development Bootcamp.
+All bootcamp content, exercises, and learning materials are located in the [Course Material](./Course%20Material/README.md) folder. Start there to begin the DevEx Workshop.
 
 🚜 This project will continue to be developed and include further modules in the future.
 
 ## Setup
 
-The rest of the repo provides a small todo application built with vanilla HTML, CSS, and JavaScript is provided to test your AI-empowered development skills.
+The rest of the repo provides a small todo application built with vanilla HTML, CSS, and JavaScript is provided to test your development skills.
 
 Start here: [Getting Started](./Course%20Material/1-getting-started.md) ⭐️

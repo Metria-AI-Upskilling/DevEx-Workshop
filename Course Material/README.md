@@ -1,6 +1,6 @@
-# AI-Assisted Development Bootcamp
+# Metria DevEx Workshop
 
-Welcome to the AI-Assisted Development Bootcamp! This collection of materials is designed to onboard and train consultants of different roles (engineering, product/project, design) in how to use AI-empowered development and AI tools to increase efficiency.
+Welcome to the Metria DevEx Workshop! This collection of materials is designed to onboard and train consultants of different roles (engineering, product/project, design) in how to use AI development tools to increase efficiency.
 
 ## Course Structure
 
@@ -38,25 +38,9 @@ These modules cover foundational concepts that apply to all roles:
    - When to use SpecKit vs simple planning
    - Exercise: Add priority system to TODO app
 
-### Engineering Specific
-
-These modules are designed for engineers implementing features and managing code quality:
-
-6. **[QA and Pull Requests](6-qa-and-pull-requests.md)** *[~30 minutes]*
-   - Automated PR creation with agents
-   - AI-assisted code review techniques
-   - Tools: Greptile and CodeRabbit
-   - Exercise: Review PRs with AI assistance
-
-7. **[Language Server Protocol (LSP)](7-language-server-protocol.md)** *[~30-45 minutes]*
-   - What LSP is and why it matters
-   - How agents use LSP for semantic understanding
-   - Setting up language servers
-   - Exercise: Explore code with LSP-powered agents
-
 ### Product / Design / Business
 
-8. **[Transforming & Structuring Data](8-transforming-structuring-data.md)** *[~30 minutes]*
+6. **[Transforming & Structuring Data](6-transforming-structuring-data.md)** *[~30 minutes]*
    - Using AI to transform unstructured data
    - Converting qualitative feedback to structured formats
    - Exercise: Generate and structure user feedback
