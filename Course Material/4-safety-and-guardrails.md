@@ -198,4 +198,14 @@ When running autonomously, Claude can execute commands with the same access you 
 
 ---
 
+---
+
+## If You Finish Early
+
+**Extension: Write a custom rule for this project**
+
+The existing exercise blocks `git add .` globally. Write a second custom rule that's specific to this project: block any attempt to directly edit `vite.config.js` and suggest asking first. Then test it by asking Claude to change the dev server port — SafetyNet should intercept it.
+
+This teaches how custom rules encode team agreements, not just generic safety patterns.
+
 ← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Transforming & Structuring Data →](5-transforming-structuring-data.md)

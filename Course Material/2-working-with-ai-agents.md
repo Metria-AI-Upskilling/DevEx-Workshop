@@ -195,4 +195,14 @@ b. `Chrome`: Press F12 → Developer Tools → Application Menu → Expand Stora
 
 ---
 
+---
+
+## If You Finish Early
+
+**Extension: Marker count badge**
+
+The sidebar currently shows all markers as a flat list with no summary. Add a small count badge next to "My Markers" that shows how many markers are currently visible (i.e. matching the active filter, not the total). When the filter changes, the count updates.
+
+Before prompting, plan it yourself first: which existing function already knows how many markers are visible? You shouldn't need to count markers anywhere new.
+
 ← [Previous: Getting Started](1-getting-started.md) | [Next: Model Context Protocol →](3-model-context-protocol.md)

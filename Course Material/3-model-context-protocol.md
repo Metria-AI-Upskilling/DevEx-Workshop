@@ -154,4 +154,12 @@ In this exercise, Context7 applies the same idea to documentation: the agent pul
 
 ---
 
+---
+
+## If You Finish Early
+
+**Extension: Cluster colour by category**
+
+Right now all marker clusters show the same default style. Use Context7 MCP to look up how `Leaflet.markercluster` supports custom cluster icon creation via `iconCreateFunction`. Then ask Claude to colour clusters differently based on whether they contain any favorites (amber) or visited (green) markers — falling back to the default blue if the cluster is all uncategorised.
+
 ← [Previous: Working with AI Agents](2-working-with-ai-agents.md) | [Next: Safety and Guardrails →](4-safety-and-guardrails.md)
