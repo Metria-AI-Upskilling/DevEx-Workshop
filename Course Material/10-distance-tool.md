@@ -76,7 +76,7 @@ A way to select two markers and see the straight-line distance between them, wit
 
 ## Day Reflection
 
-The app you've built today is genuinely useful — it saves markers, clusters them, persists them, lets you search and colour-code them, export and share them, and now measure distances between them.
+The app you've built today is a toy — but it has real features: it saves markers, clusters them, persists them, lets you search and colour-code them, export and share them, and now measure distances between them.
 
 More importantly: look back at how you built each feature. The pattern that worked every time was the same:
 
