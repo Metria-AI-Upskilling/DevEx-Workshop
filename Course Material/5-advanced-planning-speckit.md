@@ -228,4 +228,4 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
 
 ---
 
-← [Previous: Task Orchestration with VibeKanban](5-task-orchestration-vibekanban.md) | [Next: QA and Pull Requests →](7-qa-and-pull-requests.md)
+← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Next: QA and Pull Requests →](6-qa-and-pull-requests.md)

@@ -202,4 +202,4 @@ The bot comments guide your review. Your judgment makes the final call.
 
 ---
 
-← [Previous: Advanced Planning with Speckit](6-advanced-planning-speckit.md) | [Next: Language Server Protocol →](8-language-server-protocol.md)
+← [Previous: Advanced Planning with Speckit](5-advanced-planning-speckit.md) | [Next: Language Server Protocol →](7-language-server-protocol.md)

@@ -198,4 +198,4 @@ When running autonomously, Claude can execute commands with the same access you 
 
 ---
 
-← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Task Orchestration with VibeKanban →](5-task-orchestration-vibekanban.md)
+← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Advanced Planning with Speckit →](5-advanced-planning-speckit.md)

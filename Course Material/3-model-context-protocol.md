@@ -107,8 +107,6 @@ claude mcp add --transport http figma https://mcp.figma.com/mcp
 ```bash
 claude mcp add --transport http notion https://mcp.notion.com/mcp
 ``` 
-- **VibeKanban**: Read and update tickets, reason about task status, and coordinate work directly from the board instead of relying on human summaries.  
-
 In this exercise, Context7 applies the same idea to documentation: the agent pulls authoritative, up-to-date docs on demand instead of you searching manually.
 
 ### Steps

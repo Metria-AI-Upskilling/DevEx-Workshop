@@ -180,4 +180,4 @@ After completing this exercise, think about:
 
 ---
 
-← [Previous: Language Server Protocol](8-language-server-protocol.md) | [Back to Course Overview](README.md)
+← [Previous: Language Server Protocol](7-language-server-protocol.md) | [Back to Course Overview](README.md)

@@ -32,13 +32,7 @@ These modules cover foundational concepts that apply to all roles:
    - Setting up custom safety rules
    - Exercise: Test SafetyNet protection
 
-5. **[Task Orchestration with VibeKanban](5-task-orchestration-vibekanban.md)** *[~30-45 minutes]*
-   - Setting up VibeKanban for multi-agent execution
-   - Creating tickets from plans
-   - Running multiple agents in parallel
-   - Exercise: Implement 3 features in parallel with merge conflict resolution
-
-6. **[Advanced Planning with Speckit](6-advanced-planning-speckit.md)** *[~30 minutes]*
+5. **[Advanced Planning with Speckit](5-advanced-planning-speckit.md)** *[~30 minutes]*
    - Spec-Driven Development concepts
    - SpecKit workflow and commands
    - When to use SpecKit vs simple planning
@@ -48,13 +42,13 @@ These modules cover foundational concepts that apply to all roles:
 
 These modules are designed for engineers implementing features and managing code quality:
 
-7. **[QA and Pull Requests](7-qa-and-pull-requests.md)** *[~30 minutes]*
+6. **[QA and Pull Requests](6-qa-and-pull-requests.md)** *[~30 minutes]*
    - Automated PR creation with agents
    - AI-assisted code review techniques
    - Tools: Greptile and CodeRabbit
    - Exercise: Review PRs with AI assistance
 
-8. **[Language Server Protocol (LSP)](8-language-server-protocol.md)** *[~30-45 minutes]*
+7. **[Language Server Protocol (LSP)](7-language-server-protocol.md)** *[~30-45 minutes]*
    - What LSP is and why it matters
    - How agents use LSP for semantic understanding
    - Setting up language servers
@@ -62,7 +56,7 @@ These modules are designed for engineers implementing features and managing code
 
 ### Product / Design / Business
 
-9. **[Transforming & Structuring Data](9-transforming-structuring-data.md)** *[~30 minutes]*
+8. **[Transforming & Structuring Data](8-transforming-structuring-data.md)** *[~30 minutes]*
    - Using AI to transform unstructured data
    - Converting qualitative feedback to structured formats
    - Exercise: Generate and structure user feedback

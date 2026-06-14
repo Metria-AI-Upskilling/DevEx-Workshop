@@ -1,5 +1,3 @@
-import { VibeKanbanWebCompanion } from 'vibe-kanban-web-companion';
-
 // Todos array (Feature 1)
 let todos = [];
 let nextId = 1;
@@ -9,7 +7,6 @@ let currentFilter = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    initVibeKanban();
 });
 
 function init() {
@@ -29,11 +26,6 @@ function init() {
     });
 
     renderTodos();
-}
-
-function initVibeKanban() {
-    const companion = new VibeKanbanWebCompanion();
-    companion.render(document.body);
 }
 
 // Feature 1: Add, toggle, delete todos

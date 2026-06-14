@@ -209,4 +209,4 @@ Agents with all three: can implement complex features safely and intelligently.
 
 ---
 
-← [Previous: QA and Pull Requests](7-qa-and-pull-requests.md) | [Next: Transforming & Structuring Data →](9-transforming-structuring-data.md)
+← [Previous: QA and Pull Requests](6-qa-and-pull-requests.md) | [Next: Transforming & Structuring Data →](8-transforming-structuring-data.md)
