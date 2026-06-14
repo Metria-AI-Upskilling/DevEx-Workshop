@@ -36,7 +36,7 @@ There are two approaches to safety:
 Sandboxing is the basic layer. It limits file access and restricts commands to a safe subset. Better than nothing, but incomplete—it doesn't prevent dangerous remote operations or catch context-specific mistakes.
 
 To learn more:
-- [Sandbox Documentation](https://docs.anthropic.com/en/docs/claude-code/sandbox) - Official sandbox mode guide
+- [Sandbox Documentation](https://docs.anthropic.com/en/docs/claude-code/sandboxing) - Official sandbox mode guide
 
 ### Layer 2: SafetyNet (Semantic Protection)
 
