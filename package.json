@@ -1,7 +1,7 @@
 {
   "name": "metria-devex",
   "version": "1.0.0",
-  "description": "Todo app demo for multi-agent parallel development",
+  "description": "Map app demo for multi-agent parallel development",
   "main": "main.js",
   "type": "module",
   "scripts": {
@@ -14,12 +14,16 @@
     "lint:fix": "eslint main.js --fix && stylelint styles.css --fix"
   },
   "keywords": [
-    "todo",
+    "map",
+    "leaflet",
     "demo",
     "multi-agent"
   ],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
   "devDependencies": {
     "eslint": "^8.54.0",
     "stylelint": "^15.11.0",

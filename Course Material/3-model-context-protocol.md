@@ -88,11 +88,11 @@ This is what MCP enables: **frictionless access to external capabilities**.
 
 ---
 
-## Exercise: Add Due Dates with Context7 MCP
+## Exercise: Add Marker Clustering with Context7 MCP
 
 | | |
 |---|---|
-| **Goal** | Experience MCP in action—use Context7 to implement a feature without manual docs |
+| **Goal** | Experience MCP in action—use Context7 to implement marker clustering without manual docs |
 | **Concepts** | MCP integration, on-demand documentation access, library implementation |
 
 ### Before You Start: Why MCP Matters
@@ -119,38 +119,38 @@ In this exercise, Context7 applies the same idea to documentation: the agent pul
 
 3. Restart Claude Code to load the MCP. (To restart Claude, type `exit` in Claude code and run `claude` again)
 
-4. Ask Claude to use Context7 for date-fns documentation:
+4. Ask Claude to use Context7 for Leaflet.markercluster documentation:
    ```
-   Using Context7 MCP, fetch the date-fns documentation and show me
-   the key functions for formatting and parsing dates.
+   Using Context7 MCP, fetch the documentation for the Leaflet.markercluster plugin
+   and show me the key setup steps and API.
    ```
 
    **Notice**: Claude doesn't search manually or guess anything! The MCP server context7 fetches live docs on-demand.
 
-5. Ask Claude to implement due dates:
+5. Ask Claude to implement marker clustering:
    ```
-   Add due dates to todos using date-fns. Each todo should have an optional
-   due date that's formatted nicely in the UI. Add the ability to sort todos
-   by due date (upcoming first). Use Context7 if you need specific date-fns
-   examples or edge cases.
+   Add marker clustering to the Map app using Leaflet.markercluster. When many markers
+   are close together on the map, they should group into a cluster badge that shows the
+   count. Clicking a cluster zooms in to reveal the individual markers. Use Context7
+   if you need specific examples or configuration options.
    ```
 
 6. Test the feature:
-   - Add todos with and without due dates
-   - Verify dates display nicely (e.g., "Today", "Tomorrow", "Jan 25")
-   - Sort by due date and verify order
-   - Edge case: Test todos with no due date when sorting
+   - Add 10+ markers in the same area of the map
+   - Zoom out and verify they cluster into a badge showing the count
+   - Click a cluster badge and verify it zooms in to reveal individual markers
+   - Zoom back in and verify individual markers reappear
 
 ### Acceptance Criteria
-- [ ] Context7 MCP successfully fetches date-fns documentation
-- [ ] Todos have optional due dates
-- [ ] Dates are formatted naturally using date-fns
-- [ ] Can sort todos by due date (upcoming first)
-- [ ] date-fns is properly integrated with no errors
+- [ ] Context7 MCP successfully fetches Leaflet.markercluster documentation
+- [ ] Markers cluster when zoomed out and placed close together
+- [ ] Cluster badges show the correct count
+- [ ] Clicking a cluster zooms in to reveal individual markers
+- [ ] No console errors during clustering
 - [ ] You notice how Context7 MCP eliminated the need to manually search docs
 
 > [!NOTE]
-> **Why this matters**: Without MCP, you'd manually search date-fns docs, copy examples, hope they're correct. With Context7 MCP, Claude fetches live docs on-demand. That's MCP solving a real problem.
+> **Why this matters**: Without MCP, you'd manually search Leaflet.markercluster docs, copy examples, hope they're correct. With Context7 MCP, Claude fetches live docs on-demand. That's MCP solving a real problem.
 
 ---
 

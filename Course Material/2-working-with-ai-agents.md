@@ -112,15 +112,15 @@ To learn more about context rot, check out:
 ### Example Sub-Agent Workflow
 
 ```
-Task: Implement date picker with date-fns
+Task: Add marker persistence with localStorage
 
 ❌ Bad:  Main Agent:
-      1. Load all date-fns docs + entire codebase
+      1. Load all Leaflet docs + entire codebase
       2. implement
 ✅ Good: 
       1. Spawn new sub-agent with sub task to summarise documentation
-         1.1 Sub Agent loads all date-fns docs + entire codebase
-         1.2 Sub-agent searches date-fns docs → returns key API summary
+         1.1 Sub Agent loads all Leaflet docs + entire codebase
+         1.2 Sub-agent searches Leaflet docs → returns key API summary
       2. Main agent implements with focused context
 ```
 
@@ -141,15 +141,15 @@ Task: Implement date picker with date-fns
 
 | | |
 |---|---|
-| **Goal** | Add persistence or a local storage option for your To Do app so "todos" survive page refreshes |
+| **Goal** | Add persistence to the Map app so markers survive page refreshes |
 | **Concepts** | Agent prompting, iterative development, validation |
 
 ### Steps
 Before you start with the exercise:
-1. Go to the browser and add a todo.
+1. Go to the browser and click the map to add a marker.
 2. Now refresh the page.
 
-What happens? The todo is no longer visible. To find out why, we will ask Claude before implementing the solution directly.
+What happens? The marker is no longer visible. To find out why, we will ask Claude before implementing the solution directly.
 
 1. Open Claude Code in the project folder `DevEx-Workshop`
    ```bash
@@ -160,7 +160,7 @@ What happens? The todo is no longer visible. To find out why, we will ask Claude
    ```
    /plan
 
-   A TODO item appears in the app when I add it, but disappears after a page refresh.
+   A marker appears on the map when I add it, but disappears after a page refresh.
    Explain what you think is happening and why, and outline how you would approach
    confirming your theory.
    Do not change or write any code, only provide reasoning and possible explanations.
@@ -170,27 +170,27 @@ Review Claude's reasoning. It should be related to localStorage, persistence and
 
 3. After getting the right response from Claude, you can proceed with the exercise:
    ```
-   Add localStorage persistence to the TODO app. When todos are added,
-   completed, or deleted, save them to localStorage. When the app loads,
-   restore todos from localStorage. Handle the case when localStorage is
+   Add localStorage persistence to the Map app. When markers are added or deleted,
+   save them to localStorage. When the app loads, restore markers from localStorage
+   and re-add them to the Leaflet map. Handle the case when localStorage is
    empty (first visit).
    ```
 
 3. Review Claude's approach and let it implement
 
-4. Test: Add todos, mark some complete, refresh the page
+4. Test: Add markers, categorise some as Favorites or Visited, refresh the page
 
-5. Verify todos persist with correct completed/incomplete states
+5. Verify markers persist with their names, positions, and categories intact
 
-6. Edge case test: Clear localStorage, refresh, verify empty list   
+6. Edge case test: Clear localStorage, refresh, verify map shows no markers   
 a. `Safari`: Develop Menu → Developer Settings → Privacy → Manage Website Data → Remove all for 127.0.0.1  
 b. `Chrome`: Press F12 → Developer Tools → Application Menu → Expand Storage from left menu → Clear
       
 
 ### Acceptance Criteria
-- [ ] Todos persist across page refreshes
-- [ ] Completed/incomplete states are preserved
-- [ ] Empty localStorage shows empty list (no errors)
+- [ ] Markers persist across page refreshes
+- [ ] Marker names, coordinates, and categories are preserved
+- [ ] Empty localStorage shows an empty map and empty sidebar (no errors)
 - [ ] No console errors
 
 ---

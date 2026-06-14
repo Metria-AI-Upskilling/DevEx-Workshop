@@ -2,12 +2,12 @@
 
 ## What You'll Learn
 - Set up your development environment
-- Run the TODO app locally
+- Run the Map app locally
 - Understand the project structure
 
 ---
 
-In this section you will learn how to run the demo TODO app on localhost so you can use it to complete the exercises.
+In this section you will learn how to run the demo Map app on localhost so you can use it to complete the exercises.
 
 ## Prerequisites
 #### 1. Github account
@@ -90,18 +90,18 @@ If you want to learn further about CLAUDE.md, memory management and advanced kno
 DevEx-Workshop/
 ├── index.html      # Main HTML markup - contains the app layout
 ├── styles.css      # All CSS styling for the app
-├── main.js         # Application logic (add, delete, filter todos)
+├── main.js         # Application logic (add, delete, filter markers)
 ├── package.json    # Project dependencies and scripts
 └── vite.config.js  # Vite configuration
 ```
 
 **How it works:**
-- `index.html` defines the structure (input field, buttons, todo list)
+- `index.html` defines the structure (sidebar, map panel, filter buttons)
 - `styles.css` styling
-- `main.js` handles all the interactivity (adding todos, marking complete, filtering)
+- `main.js` handles all the interactivity (placing markers, categorising, filtering)
 
-## Exercise: Run the TODO App
-**Goal**: Get the TODO app running locally to verify your setup works
+## Exercise: Run the Map App
+**Goal**: Get the Map app running locally to verify your setup works
 
 **Steps**:
 
@@ -117,9 +117,9 @@ DevEx-Workshop/
 
 3. Open the app at the URL shown (typically `http://localhost:5173`)
 
-4. Test: add a todo, mark it complete, delete it, try the filter buttons
+4. Test: click the map to place a marker, name it, try the filter buttons, click a marker in the sidebar list to fly to it
 
-**Exercise is complete when**: App loads without errors and all basic features (add, complete, delete, filter) work
+**Exercise is complete when**: App loads without errors, a map of Luleå is visible, clicking the map places a named marker, and filter buttons work
 
 ---
 

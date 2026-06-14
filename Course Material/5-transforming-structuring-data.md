@@ -116,7 +116,7 @@ You've collected feedback from users, but it's unstructured. Your job: transform
 
    Ask Claude:
    ```
-   Generate 5 realistic user interview transcripts about the TODO app.
+   Generate 5 realistic user interview transcripts about the Map app.
    Each person has different use cases (personal, work, shared lists, mobile-first, etc.).
    Include quotes, pain points, and feature requests in natural language.
    ```
@@ -125,7 +125,7 @@ You've collected feedback from users, but it's unstructured. Your job: transform
 
    Ask Claude:
    ```
-   Generate 5 realistic support tickets about the TODO app.
+   Generate 5 realistic support tickets about the Map app.
    Include: bug reports, feature requests, and usability complaints.
    Write them like real users wrote them (casual, varied detail level).
    ```
