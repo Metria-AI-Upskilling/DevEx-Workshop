@@ -1,4 +1,4 @@
-# Module 6: Search & Live Filter
+# Module 7: Search & Live Filter
 
 ## What You'll Learn
 - Extend an existing feature rather than building from scratch

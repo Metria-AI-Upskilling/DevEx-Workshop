@@ -1,4 +1,4 @@
-# Module 7: Marker Colours
+# Module 8: Marker Colours
 
 ## What You'll Learn
 - Write precise visual specs that AI can actually implement correctly

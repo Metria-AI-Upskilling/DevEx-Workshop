@@ -1,4 +1,4 @@
-# Module 8: Import & Export
+# Module 9: Import & Export
 
 ## What You'll Learn
 - Use MCP to fetch a data format specification — the same technique as Module 3, now applied to a standard instead of a library
