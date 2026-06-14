@@ -5,7 +5,7 @@ import L from 'leaflet';
 let markers = [];
 let nextId = 1;
 let leafletMap = null;
-let pendingLatLng = null; // set on map click, cleared after marker is named and added
+let pendingMarker = null; // the most recently placed marker, awaiting a name
 
 // Current filter (Feature 2)
 let currentFilter = 'all';
@@ -23,20 +23,32 @@ function init() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(leafletMap);
 
-    // Map click sets pending location and focuses the name input
+    // Map click places a pin with a default name; typing renames it
     leafletMap.on('click', (e) => {
-        pendingLatLng = e.latlng;
         const input = document.getElementById('markerNameInput');
+        input.value = '';
+        addMarkerAt(e.latlng, `Marker ${nextId}`);
         input.focus();
-        input.placeholder = 'Name this location...';
     });
 
     // Wire up input and clear button
     const markerNameInput = document.getElementById('markerNameInput');
     const clearSelectionBtn = document.getElementById('clearSelectionBtn');
 
+    markerNameInput.addEventListener('input', () => {
+        if (!pendingMarker) return;
+        const name = markerNameInput.value.trim() || pendingMarker.defaultName;
+        pendingMarker.name = name;
+        pendingMarker.leafletMarker.setPopupContent(escapeHtml(name));
+        renderMarkerList();
+    });
+
     markerNameInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') addMarker();
+        if (e.key === 'Enter' && pendingMarker) {
+            pendingMarker = null;
+            markerNameInput.value = '';
+            markerNameInput.placeholder = 'Click map, then name it...';
+        }
     });
 
     clearSelectionBtn.addEventListener('click', clearSelection);
@@ -51,12 +63,7 @@ function init() {
 }
 
 // Feature 1: Add, focus, delete markers
-function addMarker() {
-    const input = document.getElementById('markerNameInput');
-    const name = input.value.trim();
-
-    if (!pendingLatLng || name === '') return;
-
+function addMarkerAt(latlng, defaultName) {
     // Use a CSS divIcon to avoid Vite asset-path issues with Leaflet's default images
     const icon = L.divIcon({
         className: 'custom-marker',
@@ -65,22 +72,22 @@ function addMarker() {
         iconAnchor: [10, 28]
     });
 
-    const leafletMarker = L.marker([pendingLatLng.lat, pendingLatLng.lng], { icon })
+    const leafletMarker = L.marker([latlng.lat, latlng.lng], { icon })
         .addTo(leafletMap)
-        .bindPopup(escapeHtml(name));
+        .bindPopup(escapeHtml(defaultName));
 
-    markers.push({
+    const marker = {
         id: nextId++,
-        name,
-        lat: pendingLatLng.lat,
-        lng: pendingLatLng.lng,
+        name: defaultName,
+        defaultName,
+        lat: latlng.lat,
+        lng: latlng.lng,
         category: 'none',
         leafletMarker
-    });
+    };
 
-    input.value = '';
-    input.placeholder = 'Click map, then name it...';
-    pendingLatLng = null;
+    markers.push(marker);
+    pendingMarker = marker; // typing in the input will rename this marker
 
     renderMarkerList();
 }
@@ -163,7 +170,7 @@ function setFilter(filter) {
 }
 
 function clearSelection() {
-    pendingLatLng = null;
+    pendingMarker = null;
     const input = document.getElementById('markerNameInput');
     input.value = '';
     input.placeholder = 'Click map, then name it...';
