@@ -72,7 +72,7 @@ Choose your review tool:
 - Visit [greptile.com](https://greptile.com)
 - Click "Connect Repository"
 - Select your GitHub account
-- Choose `ai-empowered-development-course` repository
+- Choose your (forked) `DevEx-Workshop` repository
 
 **Option B: CodeRabbit**
 - Visit [coderabbit.ai](https://coderabbit.ai)
@@ -139,7 +139,7 @@ The bot comments guide your review. Your judgment makes the final call.
    - Visit [greptile.com](https://greptile.com)
    - Click "Connect Repository"
    - Authenticate with GitHub
-   - Select your `ai-empowered-development-course` repository
+   - Select your (forked) `DevEx-Workshop` repository
 
    **CodeRabbit** (for fast, focused feedback):
    - Visit [coderabbit.ai](https://coderabbit.ai)
