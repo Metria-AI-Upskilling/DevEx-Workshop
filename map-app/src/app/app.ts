@@ -6,7 +6,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   selector: 'app-root',
   imports: [SidebarComponent, MapComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'flex flex-col h-dvh' },
 })
