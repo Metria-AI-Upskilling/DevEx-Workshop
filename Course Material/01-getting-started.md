@@ -88,34 +88,42 @@ If you want to learn further about CLAUDE.md, memory management and advanced kno
 
 ```
 DevEx-Workshop/
-├── index.html      # Main HTML markup - contains the app layout
-├── styles.css      # All CSS styling for the app
-├── main.js         # Application logic (add, delete, filter markers)
-├── package.json    # Project dependencies and scripts
-└── vite.config.js  # Vite configuration
+└── map-app/                        # Angular application
+    ├── src/
+    │   ├── app/
+    │   │   ├── map/                # Map component (Leaflet map, marker placement)
+    │   │   ├── sidebar/            # Sidebar component (marker list, filters)
+    │   │   ├── marker.service.ts   # Shared state and marker logic
+    │   │   ├── app.ts              # Root component
+    │   │   └── app.config.ts       # App configuration
+    │   ├── index.html              # Main HTML entry point
+    │   └── styles.css              # Global styles
+    ├── angular.json                # Angular CLI configuration
+    └── package.json                # Project dependencies and scripts
 ```
 
 **How it works:**
-- `index.html` defines the structure (sidebar, map panel, filter buttons)
-- `styles.css` styling
-- `main.js` handles all the interactivity (placing markers, categorising, filtering)
+- `map/` component handles Leaflet map rendering and marker placement
+- `sidebar/` component shows the marker list and filter buttons
+- `marker.service.ts` is the shared service that holds marker state and drives both components
 
 ## Exercise: Run the Map App
 **Goal**: Get the Map app running locally to verify your setup works
 
 **Steps**:
 
-1. Install dependencies
+1. Navigate to the app directory and install dependencies
    ```bash
+   cd map-app
    npm install
    ```
 
 2. Start the development server
    ```bash
-   npm run dev
+   npm start
    ```
 
-3. Open the app at the URL shown (typically `http://localhost:5173`)
+3. Open the app at the URL shown (typically `http://localhost:4200`)
 
 4. Test: click the map to place a marker, name it, try the filter buttons, click a marker in the sidebar list to fly to it
 
