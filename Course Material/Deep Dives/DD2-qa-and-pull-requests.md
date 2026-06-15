@@ -150,8 +150,9 @@ The bot comments guide your review. Your judgment makes the final call.
 
    Ask an agent to implement a feature and open a PR:
    ```
-   Add a "favorite" star toggle to each todo. When clicked,
-   toggle a star icon and save to localStorage.
+   Add a "zoom to fit" button in the sidebar that automatically adjusts
+   the map view to show all markers at once. If there are no markers,
+   the button should be disabled or hidden.
    ```
 
    Let the agent handle: branch creation → changes → commit → push → open PR
