@@ -1,3 +1,4 @@
+<!-- Human Note: This is an Angular starter CLAUDE.md template, with sane defaults. Feel free to change! Meta info: Claude will read this text and waste tokens... -->
 
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
