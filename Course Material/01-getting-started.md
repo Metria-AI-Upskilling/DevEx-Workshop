@@ -1,4 +1,4 @@
-# Module 1: Getting Started
+# Module 01: Getting Started
 
 ## What You'll Learn
 - Set up your development environment
@@ -123,4 +123,4 @@ DevEx-Workshop/
 
 ---
 
-[Next: Working with AI Agents →](2-working-with-ai-agents.md)
+← [Back to Course Material](README.md) | [Next: Working with AI Agents →](02-working-with-ai-agents.md)
