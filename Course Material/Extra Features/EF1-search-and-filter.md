@@ -27,7 +27,7 @@ This tells Claude:
 Showing existing code as the spec is one of the fastest ways to get a correct first attempt. When AI already has access to the code, you can just say "follow the same pattern as X" — you don't need to explain the architecture from scratch.
 
 > [!TIP]
-> Before prompting, read `main.js` and understand how `currentFilter`, `getFilteredMarkers`, and `setFilter` work together. That understanding is your prompt.
+> Before prompting, read `marker.service.ts` and understand how `currentFilter`, `filteredMarkers`, and `setFilter` work together. That understanding is your prompt.
 
 ---
 
@@ -44,7 +44,7 @@ A search box above the filter buttons. As you type, the marker list narrows to o
 
 ### Steps
 
-1. Read `main.js` and understand how the existing category filter works before you write a single prompt. Ask Claude to explain it if you want — but don't ask it to change anything yet.
+1. Read `marker.service.ts` and understand how the existing category filter works before you write a single prompt. Ask Claude to explain it if you want — but don't ask it to change anything yet.
 
 2. Write your own prompt. The AI lesson here is the technique: point Claude at the existing pattern and ask it to follow it. Don't describe the architecture from scratch — show it what already works and ask for the same approach.
 
@@ -74,6 +74,6 @@ A search box above the filter buttons. As you type, the marker list narrows to o
 
 The search narrows the list, but it doesn't show *why* a marker matched. When a search is active, wrap the matching part of each marker name in a `<mark>` tag so it appears highlighted. For example, searching "park" makes "Hyde **park**" render with the match highlighted.
 
-This is a pure rendering change in `renderMarkerList` — think through how to do it without breaking the XSS protection that `escapeHtml` provides.
+This is a pure rendering change in the sidebar component template — think through how to do it without breaking the XSS protection that `escapeHtml` provides.
 
 ← [Back to Extra Features](README.md) | [Next: Marker Colours →](EF2-marker-colours.md)
