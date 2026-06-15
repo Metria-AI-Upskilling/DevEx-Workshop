@@ -162,12 +162,12 @@ Agents with all three: can implement complex features safely and intelligently.
 
    Ask Claude to find something using both approaches:
    ```
-   First, use text search to find everywhere "addTodo" appears.
-   Then, ask the language server: where is the addTodo function actually called?
+   First, use text search to find everywhere "marker" appears.
+   Then, ask the language server: where is the Marker interface actually used?
    How many results differ between text search and semantic search?
    ```
 
-   **Insight**: This shows why semantic understanding matters.
+   **Insight**: This shows why semantic understanding matters. Text search will find strings, variable names, method names like "addMarker", and comments, while LSP identifies only the actual Marker type usages.
 
 4. **Ask for safe refactoring**:
 
