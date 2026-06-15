@@ -117,16 +117,16 @@ When agents finish, they open PRs. If they modified different files, merging is 
 ### Choose 3 Features to Implement
 
 Pick any 3 from this list (independent features work best):
-1. Search/Filter by Text
-2. Dark Mode Toggle
-3. Bulk Operations (Select All, Delete Completed, Mark All Complete)
-4. Drag-and-Drop Reordering
-5. Export/Import JSON
-6. Keyboard Shortcuts
-7. Todo Details/Notes
-8. Undo/Redo
+1. **Dark Mode Toggle** — Switch between light and dark map themes with persistent preference
+2. **Keyboard Shortcuts** — Add hotkeys for common actions (N for new marker, D for delete, arrow keys for map pan)
+3. **Bulk Operations** — Select multiple markers with checkboxes and perform batch actions (delete, change category, change colour)
+4. **Drawing Tools** — Add circles, polygons, or polylines to annotate the map
+5. **Marker Notes/Descriptions** — Add rich text descriptions or notes to individual markers
+6. **Current Location** — Center the map on the user's current GPS location
+7. **Map Layer Switching** — Toggle between street view, satellite, and terrain map layers
+8. **Area Measurement Tool** — Draw a shape on the map and calculate its area
 
-**Tip**: Pick features that modify different parts of the codebase (UI components, storage, etc.) to avoid excessive merge conflicts while still practicing conflict resolution.
+**Tip**: Pick features that modify different parts of the codebase (UI components, map interactions, storage layer, etc.) to avoid excessive merge conflicts while still practicing conflict resolution.
 
 ### Steps
 
@@ -182,7 +182,7 @@ Pick any 3 from this list (independent features work best):
 - [ ] You understand how VibeKanban prevented chaos
 
 > [!NOTE]
-> **What you just learned**: This is how teams scale agent-driven development. Instead of agents trampling each other, VibeKanban coordinates them into a productive system. That coordination is what makes parallel agent development possible.
+> **What you just learned**: This is an example how teams can scale agent-driven development. Instead of agents trampling each other, VibeKanban coordinates them into a productive and visible system.
 
 ---
 
