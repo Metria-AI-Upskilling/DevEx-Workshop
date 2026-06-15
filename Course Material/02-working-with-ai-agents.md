@@ -1,4 +1,4 @@
-# Module 2: Working with AI Agents
+# Module 02: Working with AI Agents
 
 ## What You'll Learn
 - Understand the difference between chat and agent interactions
@@ -205,4 +205,4 @@ The sidebar currently shows all markers as a flat list with no summary. Add a sm
 
 Before prompting, plan it yourself first: which existing function already knows how many markers are visible? You shouldn't need to count markers anywhere new.
 
-← [Previous: Getting Started](1-getting-started.md) | [Next: Model Context Protocol →](3-model-context-protocol.md)
+← [Previous: Getting Started](01-getting-started.md) | [Next: Skills & Slash Commands →](03-skills-and-slash-commands.md)

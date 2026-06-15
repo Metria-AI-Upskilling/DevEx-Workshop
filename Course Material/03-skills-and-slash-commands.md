@@ -1,4 +1,4 @@
-# Module 6: Skills & Slash Commands
+# Module 03: Skills & Slash Commands
 
 ## What You'll Learn
 
@@ -268,4 +268,4 @@ Write a skill that would be useful for the rest of today's exercises and add it 
 
 Some candidates: a skill that reviews an implementation against its acceptance criteria, a skill that explains what a function does, or a skill that generates test cases for `$ARGUMENTS`. Try adding dynamic context injection (`` !`command` ``) to ground it in live data.
 
-← [Previous: Transforming & Structuring Data](5-transforming-structuring-data.md) | [Next: Search & Live Filter →](7-search-and-filter.md)
+← [Previous: Working with AI Agents](02-working-with-ai-agents.md) | [Next: Model Context Protocol →](04-model-context-protocol.md)

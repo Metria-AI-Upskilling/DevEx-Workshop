@@ -1,4 +1,4 @@
-# Module 5: Transforming & Structuring Data
+# Module DD1: Transforming & Structuring Data
 
 ## What You'll Learn
 - Understand why unstructured data is a bottleneck for decision-making
@@ -188,4 +188,4 @@ After completing this exercise, think about:
 
 You now have a structured CSV of themes and priorities. Ask Claude to turn it into a one-page product brief — the kind you'd share with engineering before a sprint. It should include: a problem statement, the top 3 priorities with rationale, success metrics, and what's explicitly out of scope. Try it twice with different tones: one for a technical audience, one for a business stakeholder. Notice how the same underlying data produces very different documents.
 
-← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Next: Skills & Slash Commands →](6-skills-and-slash-commands.md)
+← [Back to Deep Dives](README.md)

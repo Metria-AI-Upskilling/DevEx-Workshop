@@ -1,4 +1,4 @@
-# Module 4: Safety and Guardrails
+# Module 05: Safety and Guardrails
 
 ## What You'll Learn
 - Understand why autonomous agents need guardrails
@@ -208,4 +208,4 @@ The existing exercise blocks `git add .` globally. Write a second custom rule th
 
 This teaches how custom rules encode team agreements, not just generic safety patterns.
 
-← [Previous: Model Context Protocol](3-model-context-protocol.md) | [Next: Transforming & Structuring Data →](5-transforming-structuring-data.md)
+← [Previous: Model Context Protocol](04-model-context-protocol.md)

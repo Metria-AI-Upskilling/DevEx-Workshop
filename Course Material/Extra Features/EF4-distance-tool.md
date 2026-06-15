@@ -1,4 +1,4 @@
-# Module 10: Distance Tool
+# Module EF4: Distance Tool
 
 ## What You'll Learn
 - Plan interactive UX before writing code — especially when the interaction model is non-obvious
@@ -97,4 +97,4 @@ The current tool measures point-to-point between two markers. Extend it to suppo
 
 Use `/plan` first — the interaction model changes significantly when you go from 2 fixed points to an open-ended selection.
 
-← [Previous: Import & Export](9-import-export.md) | [Back to Course Overview](README.md)
+← [Previous: Import & Export](EF3-import-export.md) | [Back to Extra Features](README.md)
