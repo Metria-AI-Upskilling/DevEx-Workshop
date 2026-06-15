@@ -264,7 +264,7 @@ This exercise is deliberately open-ended. The best skill is one you'll actually 
 
 **Extension: Add a project skill to this workshop**
 
-Write a skill that would be useful for the rest of today's exercises and add it to `.claude/skills/` in this repo. Think about what you've found yourself typing repeatedly so far, or what you'd want a shortcut for in Modules 7–10.
+Write a skill that would be useful for the rest of today's exercises and add it to `.claude/skills/` in this repo. Think about what you've found yourself typing repeatedly so far, or what you'd want a shortcut for the rest of the modules.
 
 Some candidates: a skill that reviews an implementation against its acceptance criteria, a skill that explains what a function does, or a skill that generates test cases for `$ARGUMENTS`. Try adding dynamic context injection (`` !`command` ``) to ground it in live data.
 
