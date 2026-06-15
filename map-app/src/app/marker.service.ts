@@ -26,7 +26,7 @@ export class MarkerService {
   private leafletMap: L.Map | null = null;
 
   readonly markers = signal<Marker[]>([]);
-  readonly pendingMarkerId = signal<number | null>(null);
+  readonly editingMarkerId = signal<number | null>(null);
   readonly currentFilter = signal<Filter>('all');
 
   readonly filteredMarkers = computed(() => {
@@ -58,7 +58,6 @@ export class MarkerService {
     const marker: Marker = { id, name: defaultName, defaultName, lat: latlng.lat, lng: latlng.lng, category: 'none', leafletMarker };
 
     this.markers.update((ms) => [...ms, marker]);
-    this.pendingMarkerId.set(id);
     return marker;
   }
 
@@ -66,6 +65,7 @@ export class MarkerService {
     const marker = this.markers().find((m) => m.id === id);
     if (marker) marker.leafletMarker.remove();
     this.markers.update((ms) => ms.filter((m) => m.id !== id));
+    if (this.editingMarkerId() === id) this.editingMarkerId.set(null);
   }
 
   focusMarker(id: number): void {
@@ -81,9 +81,11 @@ export class MarkerService {
     );
   }
 
-  renamePending(value: string): void {
-    const id = this.pendingMarkerId();
-    if (id === null) return;
+  startEditing(id: number): void {
+    this.editingMarkerId.set(id);
+  }
+
+  renameMarker(id: number, value: string): void {
     this.markers.update((ms) =>
       ms.map((m) => {
         if (m.id !== id) return m;
@@ -92,10 +94,11 @@ export class MarkerService {
         return { ...m, name };
       }),
     );
+    this.editingMarkerId.set(null);
   }
 
-  clearSelection(): void {
-    this.pendingMarkerId.set(null);
+  stopEditing(): void {
+    this.editingMarkerId.set(null);
   }
 
   setFilter(filter: Filter): void {

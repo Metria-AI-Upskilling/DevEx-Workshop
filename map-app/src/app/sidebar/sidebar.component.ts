@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Filter, MarkerService } from '../marker.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { Filter, MarkerService } from '../marker.service';
 })
 export class SidebarComponent {
   readonly markerService = inject(MarkerService);
-  readonly inputValue = signal('');
+  readonly editValue = signal('');
 
   readonly filters: { label: string; value: Filter }[] = [
     { label: 'All', value: 'all' },
@@ -16,19 +16,26 @@ export class SidebarComponent {
     { label: 'Visited', value: 'visited' },
   ];
 
-  onInput(event: Event): void {
-    const value = (event.target as HTMLInputElement).value;
-    this.inputValue.set(value);
-    this.markerService.renamePending(value);
+  startEditing(id: number, currentName: string): void {
+    this.editValue.set(currentName);
+    this.markerService.startEditing(id);
   }
 
-  onEnter(): void {
-    this.markerService.clearSelection();
-    this.inputValue.set('');
+  commitEdit(id: number): void {
+    this.markerService.renameMarker(id, this.editValue());
+    this.editValue.set('');
   }
 
-  clearSelection(): void {
-    this.markerService.clearSelection();
-    this.inputValue.set('');
+  cancelEdit(): void {
+    this.markerService.stopEditing();
+    this.editValue.set('');
+  }
+
+  onEditKeydown(event: KeyboardEvent, id: number): void {
+    if (event.key === 'Enter') {
+      this.commitEdit(id);
+    } else if (event.key === 'Escape') {
+      this.cancelEdit();
+    }
   }
 }
