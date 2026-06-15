@@ -4,8 +4,6 @@ This is a small course to help you become proficent in using Claude Code and oth
 
 All bootcamp content, exercises, and learning materials are located in the [Course Material](./Course%20Material/README.md) folder. Start there to begin the DevEx Workshop.
 
-🚜 This project will continue to be developed and include further modules in the future.
-
 ## Setup
 
 The rest of the repo provides a small map application built with vanilla HTML, CSS, and JavaScript is provided to test your development skills.
