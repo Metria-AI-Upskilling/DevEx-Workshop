@@ -1,4 +1,4 @@
-# Module 9: Import & Export
+# Module EF3: Import & Export
 
 ## What You'll Learn
 - Use MCP to fetch a data format specification — the same technique as Module 3, now applied to a standard instead of a library
@@ -74,4 +74,4 @@ The GeoJSON format (RFC 7946) has precise requirements. Getting the structure wr
 
 Right now export always exports all markers. Add an option to export only the markers currently visible in the sidebar (matching the active filter and search). Write the spec first: where does the option appear, how does it interact with the existing export button?
 
-← [Previous: Marker Colours](8-marker-colours.md) | [Next: Distance Tool →](10-distance-tool.md)
+← [Previous: Marker Colours](EF2-marker-colours.md) | [Next: Distance Tool →](EF4-distance-tool.md)

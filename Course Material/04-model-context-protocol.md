@@ -1,4 +1,4 @@
-# Module 3: Model Context Protocol (MCP)
+# Module 04: Model Context Protocol (MCP)
 
 ## What You'll Learn
 - Understand the problem MCP solves and why you need it
@@ -162,4 +162,4 @@ In this exercise, Context7 applies the same idea to documentation: the agent pul
 
 Right now all marker clusters show the same default style. Use Context7 MCP to look up how `Leaflet.markercluster` supports custom cluster icon creation via `iconCreateFunction`. Then ask Claude to colour clusters differently based on whether they contain any favorites (amber) or visited (green) markers — falling back to the default blue if the cluster is all uncategorised.
 
-← [Previous: Working with AI Agents](2-working-with-ai-agents.md) | [Next: Safety and Guardrails →](4-safety-and-guardrails.md)
+← [Previous: Skills & Slash Commands](03-skills-and-slash-commands.md) | [Next: Safety and Guardrails →](05-safety-and-guardrails.md)

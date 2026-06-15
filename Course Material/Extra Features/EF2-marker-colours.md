@@ -1,4 +1,4 @@
-# Module 8: Marker Colours
+# Module EF2: Marker Colours
 
 ## What You'll Learn
 - Write precise visual specs that AI can actually implement correctly
@@ -90,4 +90,4 @@ The sidebar has category filters (All / Favorites / Visited). Add a second filte
 
 Write the spec yourself first before prompting: where does the colour filter row appear, how does it interact with the category filter, where does the `currentColorFilter` state live?
 
-← [Previous: Search & Live Filter](7-search-and-filter.md) | [Next: Import & Export →](9-import-export.md)
+← [Previous: Search & Live Filter](EF1-search-and-filter.md) | [Next: Import & Export →](EF3-import-export.md)

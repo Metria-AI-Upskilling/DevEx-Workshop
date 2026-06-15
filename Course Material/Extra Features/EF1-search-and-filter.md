@@ -1,4 +1,4 @@
-# Module 7: Search & Live Filter
+# Module EF1: Search & Live Filter
 
 ## What You'll Learn
 - Extend an existing feature rather than building from scratch
@@ -76,4 +76,4 @@ The search narrows the list, but it doesn't show *why* a marker matched. When a 
 
 This is a pure rendering change in `renderMarkerList` — think through how to do it without breaking the XSS protection that `escapeHtml` provides.
 
-← [Previous: Skills & Slash Commands](6-skills-and-slash-commands.md) | [Next: Marker Colours →](8-marker-colours.md)
+← [Back to Extra Features](README.md) | [Next: Marker Colours →](EF2-marker-colours.md)
