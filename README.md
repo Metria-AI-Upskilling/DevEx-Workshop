@@ -1,11 +1,9 @@
 # Metria DevEx
 
-This is a small course to help you become proficent in using Claude Code and other AI tools to increase the velocity of the product development of product teams.
+This is a small course to help you become proficent in using Claude Code and other AI tools to increase the product development velocity! 🚀
 
-All bootcamp content, exercises, and learning materials are located in the [Course Material](./Course%20Material/README.md) folder. Start there to begin the DevEx Workshop.
+## Folder Structure
 
-## Setup
+The [/map-app](./map-app/README.md) folder provides a small map demo Angular frontend application which will be evolved throughout the course material to test your AI-assisted development skills.
 
-The rest of the repo provides a small map application built with vanilla HTML, CSS, and JavaScript is provided to test your development skills.
-
-Start here: [Getting Started](./Course%20Material/1-getting-started.md) ⭐️
+All bootcamp content, exercises, and learning materials are located in the [Course Material](./Course%20Material/README.md) folder 👈 start there to begin the DevEx Workshop! ⭐️

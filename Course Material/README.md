@@ -1,10 +1,10 @@
 # Metria DevEx Workshop
 
-Welcome to the Metria DevEx Workshop! This collection of materials is designed to onboard and train consultants of different roles (engineering, product/project, design) in how to use AI development tools to increase efficiency.
+Welcome to the Metria DevEx Workshop! This collection of AI development modules is intended for engineers to upskill within AI Assisted Development. The modules cover the basics in such a way that they should be accessible for other roles as well (e.g. design, product, devops).
 
 ## Course Structure
 
-This bootcamp is organized into modules that build on each other. Each module teaches a specific AI workflow concept while adding a real feature to the map app.
+This bootcamp is organized into modules that build on each other. Each module teaches a specific AI workflow concept while adding a real feature to the demo map app.
 
 ### Foundation Modules
 

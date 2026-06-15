@@ -42,23 +42,24 @@ With Git installed on your machine, you allow your computer to connect with your
   Download it for your computer [here](https://nodejs.org/en/download). Always choose `LTS`
   versions for install.
 
-#### 5. An IDE ([VSCode](https://code.visualstudio.com/), [Cursor](https://cursor.com), or terminal-only)
-Install the IDE of your choice or choose to work with Terminal/Command Prompt depending on your OS.
+#### 5. An IDE ([VSCode](https://code.visualstudio.com/), [Cursor](https://cursor.com), [IntelliJ](https://lp.jetbrains.com/intellij-idea-promo))
+Install the IDE of your choice for working with code. They can also be used to interact Claude, but be aware this course focuses on using Claude Code in the Terminal.
 
 #### 6. Clone the course material repository
 We will share a repository with you — check with the workshop organiser for the URL. In this step, you will get a local copy of that repository so you can work through the exercises.
 
-  ***VSCode***
-  Open VSCode, open the Command Palette (`Cmd+Shift+P` on Mac / `Ctrl+Shift+P` on Windows), type `Git: Clone`, and select it. Paste in the repository URL shared with you and follow the steps in the dialog.
+***Terminal***
+```bash
+cd <path_where_you_want_to_clone_repo>
+git clone <repository_url_shared_with_you>
+```
 
-  ***Cursor***
-  Open Cursor and select the `Clone Git Repository` option. Paste in the repository URL shared with you.
+***VSCode***
+Open VSCode, open the Command Palette (`Cmd+Shift+P` on Mac / `Ctrl+Shift+P` on Windows), type `Git: Clone`, and select it. Paste in the repository URL shared with you and follow the steps in the dialog.
 
-  ***Terminal***
-  ```bash
-  cd <path_where_you_want_to_clone_repo>
-  git clone <repository_url_shared_with_you>
-  ```
+***Cursor***
+Open Cursor and select the `Clone Git Repository` option. Paste in the repository URL shared with you.
+
 #### 7. Install claude
 
   Open a new terminal instance in the Terminal app, or your IDE of choice. Then run the following commands.
