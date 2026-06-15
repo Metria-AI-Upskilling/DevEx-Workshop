@@ -13,60 +13,61 @@ In this section you will learn how to run the demo Map app on localhost so you c
 #### 1. Github account
 Make sure you can log in to your GitHub account before the workshop.
 
-#### 2. Install the homebrew
-Install the package manager [homebrew](https://brew.sh) for easy installations (only for MacOS)  
+#### 2. Install homebrew (MacOS)
+For easy installations (MacOS), install the package manager [homebrew](https://brew.sh).
 Run this in the `Terminal` application (Cmd + Space -> Terminal)
 
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
-#### 3. Install Git 
-With Git installed on your machine, you allow your computer to connect with your github account. 
+#### 3. Install Git
+With Git installed on your machine, you allow your computer to connect with your github account.
 
   ***MacOS*** (type the following in a Terminal windows and press Enter)
   ```bash
   brew install git
   ```
-  ***Windows***    
+  ***Windows***
   Download the Git software from [here](https://git-scm.com/install/windows). To verify if it has
   been installed correctly, run `git --version` in the Command Prompt. It should run without
-  any errors.  
+  any errors.
 
-#### 4. Install Node  
-  ***MacOS***  
+#### 4. Install Node
+  ***MacOS***
   ```bash
   brew install node
   npm --version ##Verify installation
   ```
-  ***Windows***    
+  ***Windows***
   Download it for your computer [here](https://nodejs.org/en/download). Always choose `LTS`
   versions for install.
 
-#### 5. An IDE ([Cursor](https://cursor.com), VSCode, or terminal-only)  
-Install the IDE of your choice or choose to work with Terminal/Command Prompt depending on your OS.  
+#### 5. An IDE ([VSCode](https://code.visualstudio.com/), [Cursor](https://cursor.com), or terminal-only)
+Install the IDE of your choice or choose to work with Terminal/Command Prompt depending on your OS.
 
 #### 6. Clone the course material repository
 We will share a repository with you — check with the workshop organiser for the URL. In this step, you will get a local copy of that repository so you can work through the exercises.
 
-  ***Cursor***    
-  Open Cursor and select the `Clone Git Repository` option. Paste in the repository URL shared with you.
-  
-  ***VSCode***  
+  ***VSCode***
   Open VSCode, open the Command Palette (`Cmd+Shift+P` on Mac / `Ctrl+Shift+P` on Windows), type `Git: Clone`, and select it. Paste in the repository URL shared with you and follow the steps in the dialog.
-  
-  ***Terminal***  
+
+  ***Cursor***
+  Open Cursor and select the `Clone Git Repository` option. Paste in the repository URL shared with you.
+
+  ***Terminal***
   ```bash
   cd <path_where_you_want_to_clone_repo>
   git clone <repository_url_shared_with_you>
   ```
-#### 7. Install claude  
-  Open a new Terminal instance in Cursor. (Terminal Menu -> New Terminal)  
-  
+#### 7. Install claude
+
+  Open a new terminal instance in the Terminal app, or your IDE of choice. Then run the following commands.
+
   ***MacOS***
   ```bash
   brew install claude-code
   ```
-  ***Windows***   
+  ***Windows***
   ```bash
   curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
   ```
@@ -77,8 +78,8 @@ We will share a repository with you — check with the workshop organiser for th
   claude
   ```
 
-#### 8. Access to Claude 
-You already have access to Claude through your internal tools, no extra setup needed here.
+#### 8. Access to Claude
+You should have access to Claude through Metria's Claude Enterprise license. If not, please contact your Metria representative.
 
 
 #### 9. Further steps
