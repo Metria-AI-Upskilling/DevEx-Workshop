@@ -1,4 +1,4 @@
-# Module 5: Task Orchestration with VibeKanban
+# Deep Dive 5: Task Orchestration with VibeKanban
 
 ## What You'll Learn
 - Understand why task orchestration is needed for complex projects
@@ -186,4 +186,4 @@ Pick any 3 from this list (independent features work best):
 
 ---
 
-← [Previous: Safety and Guardrails](4-safety-and-guardrails.md) | [Next: Advanced Planning with Speckit →](6-advanced-planning-speckit.md)
+← [Previous: Language Server Protocol](DD4-language-server-protocol.md) | [Back to Deep Dives Overview →](README.md)

@@ -1,4 +1,4 @@
-# Module 6: Advanced Planning with Speckit
+# Deep Dive 1: Advanced Planning with Speckit
 
 ## What You'll Learn
 - Understand when simple planning isn't enough
@@ -228,4 +228,4 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
 
 ---
 
-← [Previous: Task Orchestration with VibeKanban](5-task-orchestration-vibekanban.md) | [Next: QA and Pull Requests →](7-qa-and-pull-requests.md)
+← [Back to Deep Dives Overview](README.md) | [Next: QA and Pull Requests →](DD2-qa-and-pull-requests.md)

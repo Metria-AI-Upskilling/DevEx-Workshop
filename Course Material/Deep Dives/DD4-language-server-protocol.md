@@ -1,4 +1,4 @@
-# Module 8: Language Server Protocol (LSP)
+# Deep Dive 4: Language Server Protocol (LSP)
 
 ## What You'll Learn
 - Understand why agents struggle with code without semantic understanding
@@ -209,4 +209,4 @@ Agents with all three: can implement complex features safely and intelligently.
 
 ---
 
-← [Previous: QA and Pull Requests](7-qa-and-pull-requests.md) | [Next: Transforming & Structuring Data →](9-transforming-structuring-data.md)
+← [Previous: Transforming & Structuring Data](DD3-transforming-structuring-data.md) | [Next: Task Orchestration with VibeKanban →](DD5-task-orchestration-vibekanban.md)

@@ -1,4 +1,4 @@
-# Module 7: QA and Pull Requests
+# Deep Dive 2: QA and Pull Requests
 
 ## What You'll Learn
 - Understand the full PR workflow agents enable
@@ -202,4 +202,4 @@ The bot comments guide your review. Your judgment makes the final call.
 
 ---
 
-← [Previous: Advanced Planning with Speckit](6-advanced-planning-speckit.md) | [Next: Language Server Protocol →](8-language-server-protocol.md)
+← [Previous: Advanced Planning with Speckit](DD1-advanced-planning-speckit.md) | [Next: Transforming & Structuring Data →](DD3-transforming-structuring-data.md)
