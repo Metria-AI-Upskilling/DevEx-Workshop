@@ -149,28 +149,30 @@ You already have patterns. SpecKit analyzes them, plans around them, and generat
 
 ---
 
-## Exercise: Use SpecKit to Add a Priority System
+## Exercise: Use SpecKit to Add a Route Planning System
 
 | | |
 |---|---|
 | **Goal** | Experience the full SpecKit workflow on a complex feature |
 | **Concepts** | Spec-Driven Development, systematic planning, architecture-aware implementation |
 
-### Feature: Priority System
+### Feature: Route Planning System
 
-Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and sorting.
+Add the ability to create named routes that connect multiple markers in a specific order, with visual path display, persistent storage, and route management (create, edit, delete, show/hide).
 
 ### Steps
 
 1. **Specify the feature** using SpecKit:
    ```bash
-   /speckit.specify Add a priority system (High/Medium/Low) to todos with visual indicators and sorting
+   /speckit.specify Add a route planning system that lets users create named routes connecting multiple markers in order, with visual paths on the map
    ```
 
    Answer SpecKit's clarifying questions. Be specific about:
-   - How should priorities be displayed? (colors, icons, labels)
-   - Should there be a default priority?
-   - Should users be able to change priority after creation?
+   - How should routes be created? (select markers in sequence, or pick from list)
+   - How should routes be displayed? (different colors, line styles, show/hide toggle)
+   - Should routes be editable after creation? (add/remove/reorder markers)
+   - How should multiple routes be managed? (list view, naming, deletion)
+   - Should route order be visualized? (numbered markers, arrows on path)
 
 2. **Plan the implementation**:
    ```bash
@@ -179,8 +181,9 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
 
    SpecKit analyzes your codebase and designs a plan that respects existing patterns. Review it:
    - Which files will be modified?
-   - What's the architecture?
-   - Are there edge cases?
+   - What's the architecture for route storage and state management?
+   - How does it integrate with existing marker functionality?
+   - Are there edge cases? (deleting a marker that's in a route, empty routes)
 
 3. **Optional: Verify consistency**:
    ```bash
@@ -204,10 +207,14 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
    Agents execute the tasks. Because they're systematic, implementation is smooth.
 
 6. **Test**:
-   - Add todos with different priorities
-   - Verify visual indicators display correctly
-   - Filter by priority
-   - Sort by priority (High → Medium → Low)
+   - Create a route connecting 3-4 markers in a specific order
+   - Verify the path displays correctly on the map
+   - Edit the route (add a marker, remove a marker, reorder)
+   - Create a second route and verify both can coexist
+   - Hide/show individual routes
+   - Delete a route and verify the UI updates
+   - Delete a marker that's part of a route and verify graceful handling
+   - Refresh the page and verify routes persist
    - Ensure existing functionality still works
 
 ### Acceptance Criteria
@@ -215,16 +222,20 @@ Add priorities (High/Medium/Low) to todos with visual indicators, filtering, and
 - [ ] Plan respects existing code patterns
 - [ ] All tasks are clear and appropriately sized
 - [ ] Implementation follows the systematic plan
-- [ ] Priorities display with visual indicators
-- [ ] Filtering and sorting work correctly
+- [ ] Routes can be created with multiple markers in order
+- [ ] Routes display visually on the map with distinguishable styles
+- [ ] Routes persist across page refreshes
+- [ ] Multiple routes can exist simultaneously
+- [ ] Routes can be edited, shown/hidden, and deleted
+- [ ] Deleting a marker updates or removes affected routes gracefully
 - [ ] No existing functionality is broken
 - [ ] You notice how SpecKit's structure prevented ad-hoc decisions
 
 > [!NOTE]
-> **Compare approaches**: Notice the difference between `/plan` (directional) and `/speckit` (systematic). For complex features, SpecKit's analysis catches architectural issues earlier.
+> **Compare approaches**: Notice the difference between `/plan` (directional) and `/speckit` (systematic). For complex features like this multi-entity system, SpecKit's analysis catches architectural issues earlier—especially around state management and data relationships.
 
 > [!TIP]
-> **Alternative exercises**: Implement recurring todos with recurrence patterns, or add collaborative features with shared todo lists.
+> **Alternative exercises**: Implement a marker grouping system with hierarchical categories and collapsible groups, or add a time-based marker history with timeline playback and restoration capabilities.
 
 ---
 
