@@ -46,12 +46,15 @@ With Git installed on your machine, you allow your computer to connect with your
 Install the IDE of your choice for working with code. They can also be used to interact Claude, but be aware this course focuses on using Claude Code in the Terminal.
 
 #### 6. Clone the course material repository
-We will share a repository with you — check with the workshop organiser for the URL. In this step, you will get a local copy of that repository so you can work through the exercises.
+Clone the course material through the command below. Development will be done completely on your local machine, you don't need to push or fork the repo.
+
+ !!! note
+      If you want to contribute, push your own branch, or fork the repo – let the organisers know – we'll add you to the Metria AI Upskilling GitHub organization.
 
 ***Terminal***
 ```bash
-cd <path_where_you_want_to_clone_repo>
-git clone <repository_url_shared_with_you>
+cd <path_where_you_want_to_clone_repo_to>
+git clone git@github.com:Metria-AI-Upskilling/DevEx-Workshop.git
 ```
 
 ***VSCode***
