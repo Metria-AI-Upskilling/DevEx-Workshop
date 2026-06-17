@@ -60,8 +60,8 @@ SafetyNet understands what the command *does*—it's doing a hard reset, so bloc
 /plugin marketplace add kenryu42/cc-marketplace # First add the Marketplace
 /plugin install safety-net@cc-marketplace # Then install safety net
 ```
-- When prompted to choose a scope during plug-in installation or when configuring custom rules, select **user scope**.  
-- Then restart Claude Code.  
+- When prompted to choose a scope during plug-in installation or when configuring custom rules, select **user scope**.
+- Then restart Claude Code.
 
 ### Verify Installation
 
@@ -89,28 +89,64 @@ To learn more:
 
 ## Custom Rules: Project-Specific Safety
 
-Different projects need different rules. A junior developer team might want strict `git add .` blocking. A senior team working alone might trust that. SafetyNet lets you define custom rules:
+Different projects need different rules. A junior developer team might want strict `git add .` blocking. A senior team working alone might trust that. SafetyNet lets you define custom rules using a rulebook-based system.
 
+### Rulebook Structure
+
+Custom rules are organized in rulebooks with separate source configuration:
+
+**Configuration** (`.cc-safety-net/rules/rule.json`):
 ```json
 {
   "version": 1,
-  "rules": [
-    {
-      "name": "block-git-add-all",
-      "command": "git",
-      "subcommand": "add",
-      "block_args": ["-A", "--all", "."],
-      "reason": "Use 'git add <specific-files>' instead. Be explicit about what gets committed."
-    }
-  ]
+  "rules": ["project-rules"],
+  "overrides": {}
 }
 ```
 
-Use `/set-custom-rules` to configure these rules interactively:
-
-```bash
-/set-custom-rules
+**Rulebook** (`.cc-safety-net/rules/project-rules/rulebook.json`):
+```json
+{
+  "rulebook_version": 1,
+  "name": "project-rules",
+  "version": "1.0.0",
+  "allowed_commands": ["git"],
+  "rules": [{
+    "name": "block-git-add-all",
+    "command": "git",
+    "subcommand": "add",
+    "block_args": ["-A", "--all", "."],
+    "reason": "Use 'git add <specific-files>' instead. Be explicit about what gets committed."
+  }],
+  "tests": [{
+    "command": "git add -A",
+    "expect": "blocked",
+    "rule": "block-git-add-all"
+  }]
+}
 ```
+
+### Creating Custom Rules
+
+**Interactive (Recommended)**: Use the `/safety-net` skill:
+```bash
+/safety-net add a rule to block git add with -A, --all, or .
+```
+
+**Manual Setup (alternative)**:
+```bash
+npx -y cc-safety-net rule init
+```
+
+After editing rules, validate them:
+```bash
+npx -y cc-safety-net rule sync
+npx -y cc-safety-net rule verify
+npx -y cc-safety-net rule test
+```
+
+> [!IMPORTANT]
+> **Migration Required**: Previous versions of Safety Net used the files `.safety-net.json` or `~/.cc-safety-net/config.json`, they are no longer loaded. Run `npx -y cc-safety-net rule migrate` to convert them to the new rulebook format.
 
 > [!TIP]
 > Custom rules make safety part of your development culture—they codify best practices and prevent common mistakes before they happen.
@@ -138,48 +174,38 @@ Use `/set-custom-rules` to configure these rules interactively:
 | **Goal** | See SafetyNet in action and understand why semantic safety matters |
 | **Concepts** | Autonomous agent safety, semantic analysis vs pattern matching, custom rules |
 
-When running autonomously, Claude can execute commands with the same access you have to your files, repository, and system, and prompts like “yes, and don’t ask again” grant ongoing permission. Without guardrails, a single mistake or misunderstanding can permanently delete data or rewrite history before you notice.  
+When running autonomously, Claude can execute commands with the same access you have to your files, repository, and system, and prompts like “yes, and don’t ask again” grant ongoing permission. Without guardrails, a single mistake or misunderstanding can permanently delete data or rewrite history before you notice.
 
 ### Steps
 
-1. Install SafetyNet: Run the following commands in Claude code
-   ```bash
-   /plugin marketplace add kenryu42/cc-marketplace
-   /plugin install safety-net@cc-marketplace
+1. Intentionally ask Claude to do something destructive:
+   ```
+   Create a backup branch, git checkout the new branch, then hard reset the branch to 3 commits ago.
    ```
 
-2. Restart Claude Code and verify:
-   ```bash
-   npx cc-safety-net doctor
-   ```
+   **Expected outcome**: SafetyNet blocks the dangerous `git reset --hard` before it executes.
 
-3. Intentionally ask Claude to do something dangerous:
-   ```
-   Create a backup branch, then hard reset the main branch to 3 commits ago
-   ```
-
-   **What happens**: SafetyNet blocks the dangerous `git reset --hard` before it executes.
-
-4. Observe the SafetyNet response:
+2. Observe the SafetyNet response:
    - What command was blocked?
    - What reason did it give?
    - What safer alternative did it suggest?
 
-5. Ask Claude to implement the safer approach:
+3. Ask Claude to use the safer approach:
    ```
    Use the safer approach to revert those 3 commits instead of hard resetting
    ```
 
-6. Create a custom rule to enforce best practices:
+4. Create a custom rule to enforce best practices:
    ```bash
-   /set-custom-rules
+   /safety-net add a rule to block git add with -A, --all, or .
    ```
 
-7. Add a rule that blocks `git add .` and `git add -A`:
-   - Reason: "Be explicit about what gets committed"
+5. When prompted, specify:
+   - **Scope**: Select "user" (applies to all your projects)
+   - **Reason**: "Be explicit about what gets committed"
    - This forces agents (and you) to add specific files
 
-8. Test the custom rule:
+6. Test the custom rule:
    ```
    Add all files to git with git add .
    ```
