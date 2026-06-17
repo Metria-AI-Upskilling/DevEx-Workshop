@@ -2,8 +2,11 @@
 
 ## What You'll Learn
 - Understand why autonomous agents need guardrails
-- Learn how SafetyNet prevents destructive operations
+- Learn how Safety Net prevents destructive operations
 - Configure custom safety rules for your project
+
+Bonus!
+- Install a 3rd-party marketplace and plugin
 
 ---
 
@@ -36,17 +39,17 @@ There are two approaches to safety:
 Sandboxing is the basic layer. It limits file access and restricts commands to a safe subset. Better than nothing, but incomplete—it doesn't prevent dangerous remote operations or catch context-specific mistakes.
 
 To learn more:
-- [Sandbox Documentation](https://docs.anthropic.com/en/docs/claude-code/sandboxing) - Official sandbox mode guide
+- [Claude Code: Sandbox Documentation](https://docs.anthropic.com/en/docs/claude-code/sandboxing) - Official sandbox mode guide
 
-### Layer 2: SafetyNet (Semantic Protection)
+### Layer 2: Safety Net (Semantic Protection)
 
-SafetyNet is the recommended approach because it **understands command intent**, not just patterns.
+Safety Net is the recommended approach because it **understands command intent**, not just patterns.
 
 **The difference matters**: A pattern-based system looks for `git reset --hard`. But an attacker (or buggy agent) could bypass it with `git reset --hard main` or `git reset --hard $(git rev-parse --abbrev-ref HEAD)`. Pattern matching fails.
 
-SafetyNet understands what the command *does*—it's doing a hard reset, so block it. No bypass possible because it's analyzing the command semantically, not just matching strings.
+Safety Net understands what the command does — it's doing a hard reset, so block it. No bypass possible because it's analyzing the command semantically, not just matching strings.
 
-### What SafetyNet Actually Blocks
+### What Safety Net Actually Blocks
 
 | Command Type | Examples | Why It Matters |
 |--------------|----------|---|
@@ -58,7 +61,7 @@ SafetyNet understands what the command *does*—it's doing a hard reset, so bloc
 
 ```bash
 /plugin marketplace add kenryu42/cc-marketplace # First add the Marketplace
-/plugin install safety-net@cc-marketplace # Then install safety net
+/plugin install safety-net@cc-marketplace # Then install Safety Net
 ```
 - When prompted to choose a scope during plug-in installation or when configuring custom rules, select **user scope**.
 - Then restart Claude Code.
@@ -69,7 +72,7 @@ SafetyNet understands what the command *does*—it's doing a hard reset, so bloc
 npx cc-safety-net doctor
 ```
 
-### When SafetyNet Blocks
+### When Safety Net Blocks
 
 ```
 BLOCKED by Safety Net
@@ -83,13 +86,13 @@ Command: git checkout -- src/main.py
 Notice it doesn't just block—it explains *why* and suggests the safer alternative. This is important because the agent learns the right way to do things.
 
 To learn more:
-- [SafetyNet Repository](https://github.com/kenryu42/claude-code-safety-net) - Full documentation and advanced modes
+- [Safety Net Repository](https://github.com/kenryu42/claude-code-safety-net) - Full documentation and advanced modes
 
 ---
 
 ## Custom Rules: Project-Specific Safety
 
-Different projects need different rules. A junior developer team might want strict `git add .` blocking. A senior team working alone might trust that. SafetyNet lets you define custom rules using a rulebook-based system.
+Different projects need different rules. A junior developer team might want strict `git add .` blocking. A senior team working alone might trust that. Safety Net lets you define custom rules using a rulebook-based system.
 
 ### Rulebook Structure
 
@@ -161,17 +164,17 @@ npx -y cc-safety-net rule test
 | Concept | Remember |
 |---------|----------|
 | **The Risk** | Autonomous agents execute immediately without confirmation—one mistake can be catastrophic |
-| **Layered Safety** | Sandboxing (basic) + SafetyNet (semantic analysis) + Custom rules (project-specific) |
+| **Layered Safety** | Sandboxing (basic) + Safety Net (semantic analysis) + Custom rules (project-specific) |
 | **Why Semantic Matters** | Pattern matching can be bypassed; semantic analysis understands intent |
 | **Custom Rules** | Enforce project standards and codify best practices for agent behavior |
 
 ---
 
-## Exercise: Experience SafetyNet Protection
+## Exercise: Experience Safety Net Protection
 
 | | |
 |---|---|
-| **Goal** | See SafetyNet in action and understand why semantic safety matters |
+| **Goal** | See Safety Net in action and understand why semantic safety matters |
 | **Concepts** | Autonomous agent safety, semantic analysis vs pattern matching, custom rules |
 
 When running autonomously, Claude can execute commands with the same access you have to your files, repository, and system, and prompts like “yes, and don’t ask again” grant ongoing permission. Without guardrails, a single mistake or misunderstanding can permanently delete data or rewrite history before you notice.
@@ -183,9 +186,9 @@ When running autonomously, Claude can execute commands with the same access you 
    Create a backup branch, git checkout the new branch, then hard reset the branch to 3 commits ago.
    ```
 
-   **Expected outcome**: SafetyNet blocks the dangerous `git reset --hard` before it executes.
+   **Expected outcome**: Safety Net blocks the dangerous `git reset --hard` before it executes.
 
-2. Observe the SafetyNet response:
+2. Observe the Safety Net response:
    - What command was blocked?
    - What reason did it give?
    - What safer alternative did it suggest?
@@ -210,17 +213,17 @@ When running autonomously, Claude can execute commands with the same access you 
    Add all files to git with git add .
    ```
 
-   **Notice**: Your custom rule blocks it. SafetyNet enforces your project's standards.
+   **Notice**: Your custom rule blocks it. Safety Net enforces your project's standards.
 
 ### Acceptance Criteria
-- [ ] SafetyNet is installed and verified
-- [ ] SafetyNet successfully blocks dangerous git operations
-- [ ] SafetyNet suggests a safer alternative when blocking
+- [ ] Safety Net is installed and verified
+- [ ] Safety Net successfully blocks dangerous git operations
+- [ ] Safety Net suggests a safer alternative when blocking
 - [ ] (Optional) Custom rule is created and active
 - [ ] (Optional) Custom rule blocks `git add .` as configured
 
 > [!NOTE]
-> **Why this matters**: Without SafetyNet, that `git reset --hard` would have executed immediately. With SafetyNet, it was caught, explained, and you learned the safer approach. That's the difference between a dangerous agent and a safe one.
+> **Why this matters**: Without Safety Net, that `git reset --hard` would have executed immediately. With Safety Net, it was caught, explained, and you learned the safer approach. That's the difference between a dangerous agent and a safe one.
 
 ---
 
@@ -230,7 +233,7 @@ When running autonomously, Claude can execute commands with the same access you 
 
 **Extension: Write a custom rule for this project**
 
-The existing exercise blocks `git add .` globally. Write a second custom rule that's specific to this project: block any attempt to directly edit `angular.json` and suggest asking first. Then test it by asking Claude to change the dev server port — SafetyNet should intercept it.
+The existing exercise blocks `git add .` globally. Write a second custom rule that's specific to this project: block any attempt to directly edit `angular.json` and suggest asking first. Then test it by asking Claude to change the dev server port — Safety Net should intercept it.
 
 This teaches how custom rules encode team agreements, not just generic safety patterns.
 
