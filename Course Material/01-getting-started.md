@@ -132,7 +132,7 @@ DevEx-Workshop/
 
 4. Test: click the map to place a marker, name it, try the filter buttons, click a marker in the sidebar list to fly to it
 
-**Exercise is complete when**: App loads without errors, a map of Luleå is visible, clicking the map places a named marker, and filter buttons work
+**Exercise is complete when**: App loads without errors, a map of Umeå is visible, clicking the map places a named marker, and filter buttons work
 
 ---
 
