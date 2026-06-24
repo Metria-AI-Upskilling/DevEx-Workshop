@@ -14,7 +14,7 @@ export class MapComponent {
 
   constructor() {
     afterNextRender(() => {
-      const map = L.map(this.mapEl().nativeElement).setView([65.5848, 22.1567], 13);
+      const map = L.map(this.mapEl().nativeElement).setView([63.8258, 20.2630], 13);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
